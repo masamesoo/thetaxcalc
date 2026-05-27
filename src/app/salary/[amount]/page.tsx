@@ -50,7 +50,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { amount: amountStr } = await params;
   const salary = slugToSalary(amountStr);
-  if (!salary) return { title: 'Salary Not Found | TaxYield.io' };
+  if (!salary) return { title: 'Salary Not Found | TheTaxCalc' };
 
   const formatted = formatSalary(salary);
   const baseUrl = SITE_URL;
@@ -76,7 +76,7 @@ export async function generateMetadata({
       'salary calculator 2026',
       'take home pay calculator',
     ],
-    authors: [{ name: 'TaxYield.io' }],
+    authors: [{ name: 'TheTaxCalc' }],
     alternates: {
       canonical: `${baseUrl}${path}`,
       languages: {
@@ -88,7 +88,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${baseUrl}${path}`,
-      siteName: 'TaxYield.io',
+      siteName: 'TheTaxCalc',
       type: 'website',
       locale: 'en_US',
     },

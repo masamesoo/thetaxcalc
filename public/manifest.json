@@ -1,6 +1,6 @@
 {
-  "name": "TaxYield.io",
-  "short_name": "TaxYield",
+  "name": "TheTaxCalc",
+  "short_name": "TheTaxCalc",
   "description": "Free 2026 tax calculators — paycheck, mortgage, 401(k), capital gains, and self-employment.",
   "start_url": "/",
   "display": "standalone",

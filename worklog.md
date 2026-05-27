@@ -404,3 +404,31 @@ Stage Summary:
 - .env.example created documenting all required and optional environment variables
 - No Prisma schema changes needed (SQLite-compatible)
 - No new lint errors introduced
+
+---
+Task ID: 2b
+Agent: brand-rename
+Task: Rebrand from TaxYield.io/taxyield to TheTaxCalc/thetaxcalc across all component and config files
+
+Work Log:
+- Updated header.tsx: Logo text changed from "TaxYield.io" to "TheTaxCalc" (1 replacement)
+- Updated footer.tsx: Logo text "TaxYield.io" → "TheTaxCalc" and copyright "TaxYield.io" → "TheTaxCalc" (2 replacements)
+- Updated blog-detail.tsx: JSON-LD author name "TaxYield.io" → "TheTaxCalc", publisher name "TaxYield.io" → "TheTaxCalc", byline "TaxYield Team" → "TheTaxCalc Team" (3 replacements)
+- Updated blog-list.tsx: JSON-LD name "TaxYield Blog" → "TheTaxCalc Blog", description "from TaxYield.io" → "from TheTaxCalc", H2 heading "TaxYield Blog" → "TheTaxCalc Blog" (3 replacements)
+- Updated blog-editor.tsx: Slug prefix "taxyield.io/#blog/" → "thetaxcalc.com/#blog/" (1 replacement)
+- Updated admin-dashboard.tsx: Sidebar label "TaxYield.io" → "TheTaxCalc" (1 replacement)
+- Updated admin-settings.tsx: Site name placeholder "TaxYield.io" → "TheTaxCalc" (1 replacement)
+- Updated admin-gate.tsx: Default password "taxyield2026" → "thetaxcalc2026" (2 replacements), session key "taxyield_admin_auth" → "thetaxcalc_admin_auth" (1 replacement), brand footer "TaxYield.io" → "TheTaxCalc" (1 replacement) (4 replacements total)
+- Updated cookie-consent.tsx: localStorage keys "taxyield-cookie-consent" → "thetaxcalc-cookie-consent" (3 replacements)
+- Updated manifest.json: name "TaxYield.io" → "TheTaxCalc", short_name "TaxYield" → "TheTaxCalc" (2 replacements)
+- Updated wrangler.toml: project name "taxyield" → "thetaxcalc" (1 replacement)
+- Created .env.example: New file with NEXT_PUBLIC_SITE_URL=https://thetaxcalc.com and all other required env vars documented
+
+Stage Summary:
+- 12 files updated/created with a total of 23 brand/domain replacements
+- All user-visible strings (titles, brand names, URLs, emails, localStorage keys, passwords) updated from TaxYield.io/taxyield to TheTaxCalc/thetaxcalc
+- No variable names or function names changed — only user-visible strings
+- Note: cookie-consent localStorage key change means existing users will see the consent banner again (new key)
+- Note: admin-gate password change means existing sessions invalidated (new session key + password)
+- site-config.ts already had TheTaxCalc/thetaxcalc.com (updated by a previous agent)
+- Lint: no new errors introduced (pre-existing errors remain: parsing errors in blog-detail.tsx, blog-list.tsx, salary/page.tsx; setState-in-effect in cookie-consent.tsx)

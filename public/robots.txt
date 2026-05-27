@@ -40,4 +40,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://taxyield.io/sitemap.xml
+Sitemap: https://thetaxcalc.com/sitemap.xml
